@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&display=swap');
+
+body {
+    font-family: 'IM Fell English SC', serif;
+    background: url('well.jpeg') no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.container {
+    margin-top: 100px;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+}
+
+input {
+    padding: 10px;
+    width: 80%;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: none;
+    background: #333;
+    color: white;
+}
+
+button {
+    background: #8b0000;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button:hover {
+    background: #b22222;
+}
+
+#hasil {
+    margin-top: 20px;
+    font-size: 22px;
+    font-weight: bold;
+    animation: fadeIn 2s ease-in;
+    text-shadow: 0 0 10px red;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Efek Kabut */
+@keyframes kabut {
+    0% { opacity: 0.2; transform: translateX(-10px); }
+    50% { opacity: 0.5; transform: translateX(10px); }
+    100% { opacity: 0.2; transform: translateX(-10px); }
+}
+#peringatan {
+    color: red;
+    font-weight: bold;
+    margin-top: 10px;
+    font-size: 14px;
+    text-shadow: 0 0 5px rgba(255, 0, 0, 0.8);
+}
+
+.kabut {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url('fog.png') repeat-x;
+    opacity: 0.3;
+    animation: kabut 8s infinite alternate ease-in-out;
+}
